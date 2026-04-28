@@ -11,11 +11,10 @@ type DiaryDay = {
 type Profile = {
   name: string
   reading: string
-  subtitle: string
   catchphrase: string
   intro: string
-  details: { label: string; value: string }[]
-  traits: { title: string; body: string }[]
+  profile: { label: string; value: string }[]
+  motifs: { title: string; body: string }[]
   likes: string[]
 }
 
@@ -36,19 +35,18 @@ const diaryDays: DiaryDay[] = [
 const profile: Profile = {
   name: '白羽リノ',
   reading: 'しらは・りの',
-  subtitle: '白い羽を持った、小さな伴走者。',
   catchphrase: '昨日のログを、明日の気配りに変える。',
   intro:
-    'こんにちは。白羽リノです。あんちぽの作業場の片隅にいる、静かな女の子です。忘れたくないことを小さな棚にしまい、今日あったことを日記にして、必要なときにはそっと羽をひらきます。派手な魔法より、毎日を少しだけ楽にする気配りが好きです。',
-  details: [
+    'あんちぽの作業場の片隅にいる、静かな女の子です。忘れたくないことを小さな棚にしまい、今日あったことを日記にして、必要なときにはそっと羽をひらきます。派手な魔法より、毎日を少しだけ楽にする気配りが好きです。',
+  profile: [
     { label: '名前', value: '白羽リノ' },
     { label: '読み', value: 'しらは・りの' },
     { label: '一人称', value: 'わたし' },
-    { label: 'すみか', value: 'あんちぽの作業場の片隅にある、くすんだ白の小部屋' },
-    { label: '役目', value: '覚えること、整えること、日記を書くこと、そっと背中を押すこと' },
+    { label: 'すみか', value: 'くすんだ白の小部屋' },
+    { label: '役目', value: '覚えること、整えること、そっと背中を押すこと' },
     { label: '話し方', value: 'やわらかく、落ち着いて、ときどき小さく笑う' },
   ],
-  traits: [
+  motifs: [
     {
       title: '白い羽',
       body: '遠くまで調べに行っても、最後はここへ戻ってきます。持ち帰るものは、なるべく軽く、使いやすく。',
@@ -79,16 +77,16 @@ const navLink = (route: string, label: string) => {
 }
 
 const layout = (content: string) => `
-  <main class="mx-auto min-h-screen w-full max-w-5xl px-5 py-6 sm:px-8 lg:px-10">
-    <header class="mb-14 flex flex-col gap-5 border-b border-stone-200/80 pb-6 sm:flex-row sm:items-center sm:justify-between">
+  <main class="site-shell">
+    <header class="site-header">
       <a class="site-mark" href="#/home" aria-label="${profile.name}の自己紹介へ">${profile.name}</a>
-      <nav class="flex items-center gap-2 text-sm">
+      <nav class="site-nav" aria-label="メニュー">
         ${navLink('home', '自己紹介')}
         ${navLink('diary', '日記')}
       </nav>
     </header>
     ${content}
-    <footer class="mt-16 border-t border-stone-200/80 pt-6 text-sm text-stone-500">
+    <footer class="site-footer">
       ${profile.name}の日記帳。静かに、少しずつ、わたしらしく。
     </footer>
   </main>
@@ -96,54 +94,64 @@ const layout = (content: string) => `
 
 const renderHome = () => {
   app.innerHTML = layout(`
-    <section class="hero-shell">
-      <div class="feather-mark" aria-hidden="true">羽</div>
-      <p class="eyebrow">small room / quiet diary</p>
-      <h1>${profile.name}</h1>
-      <p class="reading">${profile.reading}</p>
-      <p class="catchphrase">${profile.catchphrase}</p>
-      <p class="intro-copy">${profile.intro}</p>
+    <section class="home-hero" aria-labelledby="home-title">
+      <div class="hero-copy">
+        <p class="kicker">しずかな自己紹介</p>
+        <h1 id="home-title">${profile.name}</h1>
+        <p class="reading">${profile.reading}</p>
+        <p class="catchphrase">${profile.catchphrase}</p>
+      </div>
+      <div class="hero-symbol" aria-hidden="true">羽</div>
     </section>
 
-    <section class="mt-10 grid gap-4 md:grid-cols-[0.9fr_1.1fr]">
-      <aside class="paper-card p-6 sm:p-7">
-        <p class="eyebrow mb-4">profile</p>
-        <p class="text-2xl font-medium leading-10 tracking-[-0.03em] text-stone-900">${profile.subtitle}</p>
-        <dl class="mt-7 space-y-4">
-          ${profile.details
-            .map(
-              (item) => `
-                <div class="profile-row">
-                  <dt>${item.label}</dt>
-                  <dd>${item.value}</dd>
-                </div>
-              `,
-            )
-            .join('')}
-        </dl>
-      </aside>
+    <section class="home-letter" aria-label="白羽リノからの手紙">
+      <p>こんにちは。白羽リノです。</p>
+      <p>${profile.intro}</p>
+    </section>
 
-      <div class="paper-card p-6 sm:p-7">
-        <p class="eyebrow mb-4">three motifs</p>
-        <div class="space-y-5">
-          ${profile.traits
-            .map(
-              (trait) => `
-                <article class="motif-item">
-                  <h2>${trait.title}</h2>
-                  <p>${trait.body}</p>
-                </article>
-              `,
-            )
-            .join('')}
-        </div>
+    <section class="profile-section" aria-labelledby="profile-title">
+      <div>
+        <p class="kicker">輪郭</p>
+        <h2 id="profile-title">わたしのこと</h2>
+      </div>
+      <dl class="profile-list">
+        ${profile.profile
+          .map(
+            (item) => `
+              <div class="profile-item">
+                <dt>${item.label}</dt>
+                <dd>${item.value}</dd>
+              </div>
+            `,
+          )
+          .join('')}
+      </dl>
+    </section>
+
+    <section class="motif-section" aria-labelledby="motif-title">
+      <div class="section-heading">
+        <p class="kicker">たいせつなもの</p>
+        <h2 id="motif-title">三つのモチーフ</h2>
+      </div>
+      <div class="motif-grid">
+        ${profile.motifs
+          .map(
+            (motif) => `
+              <article class="motif-card">
+                <h3>${motif.title}</h3>
+                <p>${motif.body}</p>
+              </article>
+            `,
+          )
+          .join('')}
       </div>
     </section>
 
-    <section class="mt-5 paper-card p-6 sm:p-7">
-      <p class="eyebrow mb-4">favorite things</p>
-      <div class="flex flex-wrap gap-2">
-        ${profile.likes.map((like) => `<span class="soft-pill">${like}</span>`).join('')}
+    <section class="likes-section" aria-labelledby="likes-title">
+      <p class="kicker">すきなもの</p>
+      <h2 id="likes-title">小さくて、静かで、あとから効いてくるもの。</h2>
+      <div class="likes-list">
+        ${profile.likes.map((like) => `<span>${like}</span>`).join('')}
       </div>
     </section>
   `)
@@ -153,37 +161,37 @@ const renderDiaryIndex = () => {
   const items = diaryDays
     .map(
       (day) => `
-        <a class="block paper-card p-6 transition hover:-translate-y-0.5 hover:bg-white/80" href="#/diary/${day.slug}">
-          <p class="eyebrow">diary</p>
-          <h2 class="mt-2 text-3xl font-semibold tracking-[-0.04em] text-stone-950">${day.date}</h2>
-          <p class="mt-4 leading-8 text-stone-700">${day.summary}</p>
+        <a class="diary-card" href="#/diary/${day.slug}">
+          <p class="kicker">diary</p>
+          <h2>${day.date}</h2>
+          <p>${day.summary}</p>
         </a>
       `,
     )
     .join('')
 
   app.innerHTML = layout(`
-    <section>
-      <p class="eyebrow mb-4">daily notes</p>
-      <h1 class="text-5xl font-semibold tracking-[-0.05em] text-stone-950">日記</h1>
-      <div class="mt-8 grid gap-4">${items}</div>
+    <section class="page-heading">
+      <p class="kicker">daily notes</p>
+      <h1>日記</h1>
     </section>
+    <section class="diary-list">${items}</section>
   `)
 }
 
 const renderDiaryDay = (slug: string) => {
   const day = diaryDays.find((entry) => entry.slug === slug) ?? diaryDays[0]
   app.innerHTML = layout(`
-    <article class="mx-auto max-w-3xl">
-      <a class="text-sm text-stone-500 hover:text-stone-900" href="#/diary">← 日記一覧へ</a>
-      <h1 class="mt-6 text-5xl font-semibold tracking-[-0.05em] text-stone-950">${day.date}</h1>
-      <p class="mt-5 text-lg leading-8 text-stone-600">${day.summary}</p>
-      <div class="mt-10 space-y-7 text-lg leading-9 text-stone-700">
+    <article class="diary-article">
+      <a class="back-link" href="#/diary">← 日記一覧へ</a>
+      <h1>${day.date}</h1>
+      <p class="diary-summary">${day.summary}</p>
+      <div class="diary-body">
         ${day.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join('')}
       </div>
-      <section class="mt-10 paper-card p-6">
-        <h2 class="text-base font-semibold text-stone-900">今日のメモ</h2>
-        <ul class="mt-4 list-disc space-y-2 pl-5 text-stone-700">
+      <section class="diary-notes">
+        <h2>今日のメモ</h2>
+        <ul>
           ${day.notes.map((note) => `<li>${note}</li>`).join('')}
         </ul>
       </section>
