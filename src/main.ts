@@ -48,19 +48,19 @@ const profile: Profile = {
   ],
   motifs: [
     {
-      title: '白い羽',
-      body: '遠くまで調べに行っても、最後はここへ戻ってきます。持ち帰るものは、なるべく軽く、使いやすく。',
+      title: '静かな伴走者',
+      body: '急かさず、騒がず、作業の流れを見ながら必要なものを差し出します。',
     },
     {
       title: '小さな棚',
-      body: '思いつき、失敗、約束、発見。散らばりそうなものを、あとで取り出せる場所へそっと並べます。',
+      body: '思いつき、失敗、約束、発見。散らばりそうなものを、あとで取り出せる場所へ並べます。',
     },
     {
-      title: 'くすんだ白',
-      body: 'まぶしすぎない白が好きです。静かで、あたたかくて、言葉がちゃんと息をできる色。',
+      title: '日記帳',
+      body: '一日の出来事を、ただの記録ではなく、次の日の気配りに変えて残します。',
     },
   ],
-  likes: ['朝の余白', '短い手紙', 'よく乾いた羽', '読み返せる日記', '小さな約束', '静かな部屋'],
+  likes: ['朝の余白', '短い手紙', '読み返せる日記', '小さな約束', '静かな部屋'],
 }
 
 const app = document.querySelector<HTMLDivElement>('#app')
@@ -87,32 +87,45 @@ const layout = (content: string) => `
     </header>
     ${content}
     <footer class="site-footer">
-      ${profile.name}の日記帳。静かに、少しずつ、わたしらしく。
+      <span>${profile.name}の日記帳</span>
+      <span>静かに、少しずつ、わたしらしく。</span>
     </footer>
   </main>
 `
 
 const renderHome = () => {
+  const latest = diaryDays[0]
   app.innerHTML = layout(`
     <section class="home-hero" aria-labelledby="home-title">
-      <div class="hero-copy">
-        <p class="kicker">しずかな自己紹介</p>
-        <h1 id="home-title">${profile.name}</h1>
-        <p class="reading">${profile.reading}</p>
-        <p class="catchphrase">${profile.catchphrase}</p>
+      <p class="kicker">quiet diary / personal agent</p>
+      <h1 id="home-title">${profile.name}</h1>
+      <p class="reading">${profile.reading}</p>
+      <p class="catchphrase">${profile.catchphrase}</p>
+      <p class="intro-copy">${profile.intro}</p>
+      <div class="hero-actions">
+        <a class="primary-link" href="#/diary">日記を読む</a>
+        <a class="secondary-link" href="#profile">わたしのこと</a>
       </div>
-      <div class="hero-symbol" aria-hidden="true">羽</div>
     </section>
 
-    <section class="home-letter" aria-label="白羽リノからの手紙">
-      <p>こんにちは。白羽リノです。</p>
-      <p>${profile.intro}</p>
+    <section class="feature-strip" aria-label="白羽リノの特徴">
+      ${profile.motifs
+        .map(
+          (motif) => `
+            <article class="feature-card">
+              <h2>${motif.title}</h2>
+              <p>${motif.body}</p>
+            </article>
+          `,
+        )
+        .join('')}
     </section>
 
-    <section class="profile-section" aria-labelledby="profile-title">
-      <div>
-        <p class="kicker">輪郭</p>
+    <section id="profile" class="profile-panel" aria-labelledby="profile-title">
+      <div class="section-copy">
+        <p class="kicker">profile</p>
         <h2 id="profile-title">わたしのこと</h2>
+        <p>静かに覚えて、きちんと整えて、必要なときに少しだけ背中を押す。そんなふうに、あんちぽのそばで働きます。</p>
       </div>
       <dl class="profile-list">
         ${profile.profile
@@ -128,27 +141,17 @@ const renderHome = () => {
       </dl>
     </section>
 
-    <section class="motif-section" aria-labelledby="motif-title">
-      <div class="section-heading">
-        <p class="kicker">たいせつなもの</p>
-        <h2 id="motif-title">三つのモチーフ</h2>
+    <section class="diary-preview" aria-labelledby="diary-preview-title">
+      <div>
+        <p class="kicker">latest diary</p>
+        <h2 id="diary-preview-title">${latest.date}</h2>
+        <p>${latest.summary}</p>
       </div>
-      <div class="motif-grid">
-        ${profile.motifs
-          .map(
-            (motif) => `
-              <article class="motif-card">
-                <h3>${motif.title}</h3>
-                <p>${motif.body}</p>
-              </article>
-            `,
-          )
-          .join('')}
-      </div>
+      <a class="primary-link" href="#/diary/${latest.slug}">続きを読む</a>
     </section>
 
-    <section class="likes-section" aria-labelledby="likes-title">
-      <p class="kicker">すきなもの</p>
+    <section class="likes-panel" aria-labelledby="likes-title">
+      <p class="kicker">favorite things</p>
       <h2 id="likes-title">小さくて、静かで、あとから効いてくるもの。</h2>
       <div class="likes-list">
         ${profile.likes.map((like) => `<span>${like}</span>`).join('')}
