@@ -17,7 +17,9 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: #f4f1eb;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0) 18rem),
+    #f4f1eb;
 }
 
 ::selection {
@@ -25,10 +27,19 @@ body {
   background: #ded8cc;
 }
 
+.site-mark {
+  color: #292524;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+}
+
 .nav-link {
   border-radius: 999px;
   padding: 0.5rem 0.9rem;
   color: #78716c;
+  text-decoration: none;
   transition:
     color 160ms ease,
     background-color 160ms ease;
@@ -37,12 +48,133 @@ body {
 .nav-link:hover,
 .nav-link-active {
   color: #1c1917;
-  background: rgba(255, 255, 255, 0.74);
+  background: rgba(255, 255, 255, 0.78);
 }
 
-.clean-card {
+.hero-shell {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(214, 211, 209, 0.9);
+  border-radius: 2rem;
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.9), transparent 18rem),
+    rgba(255, 255, 255, 0.48);
+  padding: clamp(2rem, 6vw, 4.5rem);
+  box-shadow:
+    rgba(41, 37, 36, 0.04) 0 18px 50px,
+    rgba(41, 37, 36, 0.025) 0 4px 16px;
+}
+
+.hero-shell h1 {
+  margin: 0;
+  color: #1c1917;
+  font-size: clamp(3.7rem, 12vw, 8.6rem);
+  font-weight: 650;
+  letter-spacing: -0.09em;
+  line-height: 0.92;
+}
+
+.feather-mark {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.4rem;
+  color: rgba(120, 113, 108, 0.12);
+  font-size: clamp(5rem, 16vw, 11rem);
+  font-weight: 600;
+  letter-spacing: -0.12em;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.eyebrow {
+  color: #78716c;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.reading {
+  margin-top: 1rem;
+  color: #78716c;
+  font-size: 1.05rem;
+}
+
+.catchphrase {
+  max-width: 42rem;
+  margin-top: 2.2rem;
+  color: #292524;
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 1.35;
+}
+
+.intro-copy {
+  max-width: 42rem;
+  margin-top: 1.5rem;
+  color: #57534e;
+  font-size: 1.08rem;
+  line-height: 2;
+}
+
+.paper-card {
   border: 1px solid rgba(214, 211, 209, 0.9);
   border-radius: 1.5rem;
-  background: rgba(255, 255, 255, 0.56);
-  box-shadow: 0 12px 30px rgba(41, 37, 36, 0.035);
+  background: rgba(255, 255, 255, 0.54);
+  box-shadow:
+    rgba(41, 37, 36, 0.035) 0 12px 30px,
+    rgba(41, 37, 36, 0.02) 0 2px 8px;
+}
+
+.profile-row {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.profile-row dt {
+  color: #8a8178;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.profile-row dd {
+  margin: 0;
+  color: #57534e;
+  line-height: 1.8;
+}
+
+.motif-item {
+  border-top: 1px solid rgba(214, 211, 209, 0.82);
+  padding-top: 1.15rem;
+}
+
+.motif-item:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.motif-item h2 {
+  margin: 0;
+  color: #1c1917;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.motif-item p {
+  margin: 0.65rem 0 0;
+  color: #57534e;
+  line-height: 1.9;
+}
+
+.soft-pill {
+  border: 1px solid rgba(214, 211, 209, 0.92);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.76);
+  color: #625b54;
+  padding: 0.38rem 0.72rem;
+  font-size: 0.9rem;
 }
