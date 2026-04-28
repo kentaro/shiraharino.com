@@ -98,6 +98,7 @@ const renderHome = () => {
   const latest = diaryDays[0]
   app.innerHTML = layout(`
     <section class="home-hero" aria-labelledby="home-title">
+      <img class="hero-background" src="/assets/shiraha-rino-hero.png" alt="" aria-hidden="true" />
       <div class="hero-text">
         <p class="kicker">quiet diary / personal agent</p>
         <h1 id="home-title">${profile.name}</h1>
@@ -109,9 +110,6 @@ const renderHome = () => {
           <a class="secondary-link" href="#profile">わたしのこと</a>
         </div>
       </div>
-      <figure class="hero-portrait">
-        <img src="/assets/shiraha-rino.png" alt="白羽リノの肖像" />
-      </figure>
     </section>
 
     <section class="feature-strip" aria-label="白羽リノの特徴">

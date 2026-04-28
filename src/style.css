@@ -120,27 +120,47 @@ a {
 
 .home-hero {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1.04fr) minmax(18rem, 0.74fr);
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: center;
   min-height: calc(100svh - 120px);
-  padding: clamp(4.5rem, 9vw, 7rem) clamp(1.25rem, 4vw, 3.6rem) clamp(3.5rem, 7vw, 5.5rem);
   border: 1px solid rgba(214, 204, 190, 0.86);
   border-radius: clamp(28px, 4vw, 44px);
-  background:
-    radial-gradient(circle at 82% 18%, rgba(170, 218, 230, 0.22), transparent 18rem),
-    radial-gradient(circle at 12% 0%, rgba(255, 255, 255, 0.92), transparent 18rem),
-    rgba(255, 255, 255, 0.48);
+  background: #f7f3ec;
   box-shadow:
     rgba(43, 39, 34, 0.05) 0 24px 70px,
     rgba(43, 39, 34, 0.025) 0 2px 12px;
   overflow: hidden;
 }
 
+.home-hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: '';
+  background:
+    linear-gradient(90deg, rgba(248, 245, 238, 0.98) 0%, rgba(248, 245, 238, 0.92) 31%, rgba(248, 245, 238, 0.58) 54%, rgba(248, 245, 238, 0.12) 100%),
+    linear-gradient(180deg, rgba(248, 245, 238, 0.34) 0%, rgba(248, 245, 238, 0.1) 46%, rgba(248, 245, 238, 0.5) 100%);
+  pointer-events: none;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+  opacity: 0.88;
+  filter: saturate(0.94) contrast(0.98) brightness(1.03);
+}
+
 .hero-text {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  display: flex;
+  min-height: calc(100svh - 120px);
+  max-width: 39rem;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(4.5rem, 9vw, 7rem) clamp(1.25rem, 4vw, 3.6rem) clamp(3.5rem, 7vw, 5.5rem);
 }
 
 .home-hero h1 {
@@ -183,37 +203,6 @@ a {
   flex-wrap: wrap;
   gap: 0.7rem;
   margin-top: 2.2rem;
-}
-
-.hero-portrait {
-  position: relative;
-  z-index: 1;
-  justify-self: end;
-  width: min(100%, 25rem);
-  margin: 0;
-}
-
-.hero-portrait::before {
-  position: absolute;
-  inset: 8% -10% -6% 8%;
-  content: '';
-  border-radius: 999px;
-  background: rgba(132, 205, 218, 0.18);
-  filter: blur(34px);
-}
-
-.hero-portrait img {
-  position: relative;
-  display: block;
-  width: 100%;
-  aspect-ratio: 1;
-  border: 1px solid rgba(214, 204, 190, 0.82);
-  border-radius: 38%;
-  background: #f8fbfb;
-  box-shadow:
-    rgba(43, 39, 34, 0.1) 0 22px 56px,
-    rgba(43, 39, 34, 0.035) 0 2px 10px;
-  object-fit: cover;
 }
 
 .primary-link,
@@ -488,9 +477,25 @@ a {
   }
 
   .home-hero {
-    grid-template-columns: 1fr;
     min-height: auto;
-    padding: 4rem clamp(1.2rem, 5vw, 2rem) 2.4rem;
+  }
+
+  .home-hero::before {
+    background:
+      linear-gradient(180deg, rgba(248, 245, 238, 0.18) 0%, rgba(248, 245, 238, 0.34) 36%, rgba(248, 245, 238, 0.96) 66%, rgba(248, 245, 238, 0.98) 100%),
+      linear-gradient(90deg, rgba(248, 245, 238, 0.15), rgba(248, 245, 238, 0.15));
+  }
+
+  .hero-background {
+    height: 58%;
+    object-position: center top;
+  }
+
+  .hero-text {
+    min-height: auto;
+    max-width: none;
+    justify-content: flex-end;
+    padding: min(64vw, 19rem) clamp(1.2rem, 5vw, 2rem) 2.4rem;
     text-align: center;
   }
 
@@ -512,12 +517,6 @@ a {
 
   .hero-actions {
     justify-content: center;
-  }
-
-  .hero-portrait {
-    order: -1;
-    justify-self: center;
-    width: min(72vw, 18rem);
   }
 
   .feature-strip,
@@ -557,15 +556,15 @@ a {
   }
 
   .home-hero {
-    padding: 2.8rem 1rem 1.35rem;
+    min-height: auto;
   }
 
-  .hero-portrait {
-    width: min(70vw, 14rem);
+  .hero-background {
+    height: 54%;
   }
 
-  .hero-portrait img {
-    border-radius: 34%;
+  .hero-text {
+    padding: min(65vw, 16rem) 1rem 1.35rem;
   }
 
   .home-hero h1 {
