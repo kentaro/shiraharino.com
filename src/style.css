@@ -240,7 +240,7 @@ a {
 .feature-strip {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  gap: clamp(1.35rem, 3vw, 2.4rem);
   margin-top: 0;
 }
 
@@ -250,15 +250,15 @@ a {
 .likes-panel,
 .diary-card,
 .diary-notes {
-  border: 1px solid rgba(214, 204, 190, 0.9);
-  background: rgba(255, 255, 255, 0.5);
-  box-shadow: rgba(43, 39, 34, 0.026) 0 16px 40px;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .feature-card {
   min-height: 15rem;
-  border-radius: 28px;
-  padding: clamp(1.55rem, 2.4vw, 2rem);
+  border-radius: 0;
+  padding: clamp(1.1rem, 2vw, 1.55rem) 0;
 }
 
 .feature-card h2 {
@@ -357,9 +357,9 @@ a {
 }
 
 .likes-list span {
-  border: 1px solid rgba(217, 207, 192, 0.95);
+  border: 0;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.62);
+  background: rgba(255, 255, 255, 0.42);
   color: #62594f;
   padding: 0.56rem 0.86rem;
   font-size: 0.92rem;
@@ -476,29 +476,33 @@ a {
 
   .home-hero {
     min-height: auto;
+    margin-top: 1.1rem;
+    margin-bottom: clamp(2.8rem, 10vw, 4.2rem);
+    border-radius: 0;
   }
 
   .home-hero::before {
     background:
-      linear-gradient(180deg, rgba(248, 245, 238, 0.18) 0%, rgba(248, 245, 238, 0.34) 36%, rgba(248, 245, 238, 0.96) 66%, rgba(248, 245, 238, 0.98) 100%),
-      linear-gradient(90deg, rgba(248, 245, 238, 0.15), rgba(248, 245, 238, 0.15));
+      linear-gradient(180deg, rgba(248, 245, 238, 0.08) 0%, rgba(248, 245, 238, 0.2) 30%, rgba(248, 245, 238, 0.86) 55%, rgba(248, 245, 238, 0.98) 100%),
+      linear-gradient(90deg, rgba(248, 245, 238, 0.08), rgba(248, 245, 238, 0.08));
   }
 
   .hero-background {
-    height: 58%;
-    object-position: center top;
+    height: 46%;
+    object-position: 62% top;
   }
 
   .hero-text {
     min-height: auto;
     max-width: none;
-    justify-content: flex-end;
-    padding: min(64vw, 19rem) clamp(1.2rem, 5vw, 2rem) 2.4rem;
+    justify-content: flex-start;
+    padding: clamp(10.5rem, 48vw, 15rem) clamp(1.2rem, 5vw, 2rem) 1.9rem;
     text-align: center;
   }
 
   .home-hero h1 {
-    font-size: clamp(3.8rem, 17vw, 6.3rem);
+    margin-top: 0.78rem;
+    font-size: clamp(3.35rem, 15vw, 5.2rem);
   }
 
   .catchphrase {
@@ -555,18 +559,22 @@ a {
 
   .home-hero {
     min-height: auto;
+    margin-top: 0.9rem;
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
   }
 
   .hero-background {
-    height: 54%;
+    height: 42%;
+    object-position: 64% top;
   }
 
   .hero-text {
-    padding: min(65vw, 16rem) 1rem 1.35rem;
+    padding: clamp(9.2rem, 43vw, 12.4rem) 1.2rem 1.45rem;
   }
 
   .home-hero h1 {
-    font-size: clamp(3.15rem, 18vw, 4.35rem);
+    font-size: clamp(3rem, 15vw, 4rem);
     letter-spacing: -0.105em;
   }
 
