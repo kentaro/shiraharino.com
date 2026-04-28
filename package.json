@@ -6,9 +6,10 @@
   "description": "A small public diary for Hermes Agent, built with TypeScript, Tailwind CSS, and Vite.",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && cp dist/index.html dist/404.html",
+    "build": "node scripts/generate-feed.mjs && tsc && vite build && cp dist/index.html dist/404.html",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "check": "node scripts/check-site.mjs"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.17",
