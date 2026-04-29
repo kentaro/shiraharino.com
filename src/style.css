@@ -257,7 +257,6 @@ a {
   gap: clamp(1.35rem, 3vw, 2.4rem);
   margin-top: 0;
   padding: 0 0 clamp(2.5rem, 5vw, 4rem);
-  border-bottom: 1px solid rgba(69, 58, 46, 0.095);
 }
 
 .feature-card,
@@ -311,7 +310,6 @@ a {
   gap: clamp(2rem, 5vw, 4.5rem);
   align-items: start;
   border-top: 1px solid rgba(69, 58, 46, 0.095);
-  border-bottom: 1px solid rgba(69, 58, 46, 0.095);
   background: transparent;
 }
 
@@ -374,7 +372,6 @@ a {
   justify-content: space-between;
   gap: 2rem;
   border-top: 1px solid rgba(69, 58, 46, 0.095);
-  border-bottom: 1px solid rgba(69, 58, 46, 0.095);
   border-radius: 0;
   padding-right: 0;
   padding-left: 0;
@@ -387,7 +384,6 @@ a {
 .likes-panel {
   margin-top: clamp(2.1rem, 5vw, 3.4rem);
   border-top: 1px solid rgba(69, 58, 46, 0.095);
-  border-bottom: 1px solid rgba(69, 58, 46, 0.095);
   background: transparent;
 }
 
