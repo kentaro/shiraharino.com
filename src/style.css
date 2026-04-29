@@ -32,9 +32,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background:
-    radial-gradient(circle at 50% -8rem, rgba(255, 255, 255, 0.96), transparent 27rem),
-    linear-gradient(180deg, #fbf8f2 0%, #f6f0e7 100%);
+  background: #fdf7ef;
   overflow-x: hidden;
 }
 
@@ -132,8 +130,8 @@ a {
   margin-right: calc(50% - 50vw);
   margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
   margin-left: calc(50% - 50vw);
-  background: url('/assets/shiraha-rino-hero-wide.png') center top / 100% auto no-repeat;
-  aspect-ratio: 3 / 1;
+  background: url('/assets/shiraha-rino-hero-wide.png') 60% center / cover no-repeat;
+  min-height: clamp(560px, 50vw, 760px);
   overflow: hidden;
 }
 
@@ -144,15 +142,15 @@ a {
   content: '';
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0.72) 0%,
-    rgba(255, 255, 255, 0.44) 22%,
-    rgba(255, 255, 255, 0.14) 42%,
-    rgba(255, 255, 255, 0) 56%
+    rgba(253, 247, 239, 0.88) 0%,
+    rgba(253, 247, 239, 0.6) 28%,
+    rgba(253, 247, 239, 0.22) 48%,
+    rgba(253, 247, 239, 0) 62%
   );
   pointer-events: none;
 }
 
-.hero-portrait-mobile {
+.hero-image-mobile {
   display: none;
 }
 
@@ -167,6 +165,7 @@ a {
   width: min(100% - var(--pad-x), var(--container));
   height: 100%;
   padding-top: var(--header-h);
+  padding-bottom: clamp(2rem, 4vw, 3.5rem);
   box-sizing: border-box;
 }
 
@@ -574,29 +573,24 @@ a {
   }
 
   .home-hero {
-    aspect-ratio: auto;
     margin-top: calc(-1 * var(--header-h));
     margin-bottom: clamp(2.3rem, 8vw, 3.8rem);
-    padding: clamp(5rem, 14vw, 7rem) 0 clamp(2.4rem, 7vw, 3.6rem);
-    background: linear-gradient(180deg, #f4f1ec 0%, #fbf8f2 100%);
+    padding: 0;
+    background: none;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
   }
 
   .home-hero::before {
     display: none;
   }
 
-  .hero-portrait-mobile {
-    display: flex;
-    justify-content: center;
-    width: min(100% - var(--pad-x-narrow), var(--container));
-    margin: 0 auto 1.4rem;
-  }
-
-  .hero-portrait-mobile img {
+  .hero-image-mobile {
+    display: block;
     width: 100%;
-    max-width: 220px;
     height: auto;
-    border-radius: 22px;
+    margin-top: var(--header-h);
   }
 
   .hero-inner {
@@ -608,7 +602,7 @@ a {
     width: min(100% - var(--pad-x-narrow), var(--container));
     height: auto;
     margin: 0 auto;
-    padding-top: 0;
+    padding: clamp(2rem, 5vw, 3rem) 0 clamp(2rem, 5vw, 3rem);
   }
 
   .hero-text {
