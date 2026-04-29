@@ -14,8 +14,7 @@
 
   --container: 1120px;
   --reading: 760px;
-  --pad-x: 2rem;
-  --pad-x-narrow: 1.35rem;
+  --pad-x: clamp(1.5rem, 4vw, 3rem);
   --pad-x-mobile: 1.25rem;
   --header-h: 4.25rem;
 }
@@ -130,56 +129,59 @@ a {
   margin-right: calc(50% - 50vw);
   margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
   margin-left: calc(50% - 50vw);
-  background: url('/assets/shiraha-rino-hero-wide.png') 60% center / cover no-repeat;
-  min-height: clamp(560px, 50vw, 760px);
+  background: #fdf7ef;
+  min-height: clamp(440px, 56vw, 760px);
   overflow: hidden;
 }
 
-.home-hero::before {
+.hero-image-mobile {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% center;
   z-index: 1;
-  content: '';
-  background: linear-gradient(
-    90deg,
-    rgba(253, 247, 239, 0.88) 0%,
-    rgba(253, 247, 239, 0.6) 28%,
-    rgba(253, 247, 239, 0.22) 48%,
-    rgba(253, 247, 239, 0) 62%
-  );
-  pointer-events: none;
 }
 
-.hero-image-mobile {
+.home-hero::before {
   display: none;
 }
 
 .hero-inner {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
   z-index: 2;
   display: flex;
   align-items: center;
   width: min(100% - var(--pad-x), var(--container));
-  height: 100%;
+  min-height: clamp(440px, 56vw, 760px);
+  margin: 0 auto;
   padding-top: var(--header-h);
   padding-bottom: clamp(2rem, 4vw, 3.5rem);
   box-sizing: border-box;
+  pointer-events: none;
+}
+
+.hero-text {
+  width: 50%;
+  pointer-events: auto;
+}
+
+.hero-text > * {
+  pointer-events: auto;
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
-  width: 48%;
   max-width: 30rem;
 }
 
 .home-hero h1 {
   margin: 1rem 0 0;
   color: #1f1a16;
-  font-size: clamp(4.1rem, 9.2vw, 7.4rem);
+  font-size: clamp(2.6rem, 6.4vw, 6.8rem);
   font-weight: 720;
   letter-spacing: -0.11em;
   line-height: 0.98;
@@ -195,11 +197,10 @@ a {
 .catchphrase {
   margin: clamp(1.8rem, 4vw, 2.7rem) 0 0;
   color: #322d27;
-  font-size: clamp(1.42rem, 2.25vw, 2rem);
+  font-size: clamp(1.05rem, 1.8vw, 2rem);
   font-weight: 580;
   letter-spacing: -0.055em;
   line-height: 1.4;
-  white-space: nowrap;
 }
 
 .intro-copy {
@@ -564,52 +565,11 @@ a {
 
 @media (max-width: 1024px) {
   .site-shell {
-    width: min(100% - var(--pad-x-narrow), var(--container));
     padding-top: 0;
   }
 
-  .site-header {
-    width: min(100% - var(--pad-x-narrow), var(--container));
-  }
-
   .home-hero {
-    margin-top: calc(-1 * var(--header-h));
     margin-bottom: clamp(2.3rem, 8vw, 3.8rem);
-    padding: 0;
-    background: none;
-    min-height: 0;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .home-hero::before {
-    display: none;
-  }
-
-  .hero-image-mobile {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin-top: var(--header-h);
-  }
-
-  .hero-inner {
-    position: static;
-    transform: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: min(100% - var(--pad-x-narrow), var(--container));
-    height: auto;
-    margin: 0 auto;
-    padding: clamp(2rem, 5vw, 3rem) 0 clamp(2rem, 5vw, 3rem);
-  }
-
-  .hero-text {
-    width: 100%;
-    max-width: none;
-    align-items: center;
-    text-align: center;
   }
 
   .intro-copy {
@@ -656,29 +616,8 @@ a {
 }
 
 @media (max-width: 520px) {
-  .site-shell {
-    width: 100%;
-    padding: 0 var(--pad-x-mobile) 44px;
-  }
-
-  .site-header {
-    width: 100%;
-    padding: 0.9rem var(--pad-x-mobile);
-    top: 0;
-  }
-
-  .hero-portrait-mobile {
-    width: 100%;
-  }
-
-  .hero-portrait-mobile img {
-    max-width: 180px;
-    border-radius: 20px;
-  }
-
-  .hero-inner {
-    width: 100%;
-    padding: 0 var(--pad-x-mobile);
+  .home-hero {
+    min-height: clamp(360px, 84vw, 460px);
   }
 
   .site-mark {
