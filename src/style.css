@@ -124,58 +124,46 @@ a {
 
 .home-hero {
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   width: 100vw;
+  min-height: clamp(440px, 56vw, 760px);
   margin-top: calc(-1 * var(--header-h));
   margin-right: calc(50% - 50vw);
   margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
   margin-left: calc(50% - 50vw);
   background: #fdf7ef;
-  min-height: clamp(440px, 56vw, 760px);
   overflow: hidden;
 }
 
-.hero-image-mobile {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50vw;
-  height: 100%;
-  object-fit: cover;
-  object-position: 70% center;
-  z-index: 1;
-}
-
-.home-hero::before {
-  display: none;
-}
-
-.hero-inner {
-  position: relative;
-  z-index: 2;
+.hero-text-col {
   display: flex;
   align-items: center;
-  width: min(100% - var(--pad-x), var(--container));
-  min-height: clamp(440px, 56vw, 760px);
-  margin: 0 auto;
-  padding-top: var(--header-h);
+  padding-top: calc(var(--header-h) + clamp(1rem, 2.5vw, 2rem));
+  padding-right: clamp(1.25rem, 3vw, 2.5rem);
   padding-bottom: clamp(2rem, 4vw, 3.5rem);
-  box-sizing: border-box;
-  pointer-events: none;
-}
-
-.hero-text {
-  width: 50%;
-  pointer-events: auto;
-}
-
-.hero-text > * {
-  pointer-events: auto;
+  padding-left: max(clamp(1.5rem, 4vw, 3rem), calc((100vw - var(--container)) / 2));
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
-  max-width: 30rem;
+  width: 100%;
+  max-width: 32rem;
+}
+
+.hero-image-col {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image-col img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% center;
 }
 
 .home-hero h1 {
@@ -576,6 +564,10 @@ a {
     display: none;
   }
 
+  .hero-text-col {
+    padding-left: clamp(1.5rem, 4vw, 2.5rem);
+  }
+
   .home-hero h1 {
     margin-top: 0.72rem;
     font-size: clamp(2.9rem, 10vw, 4.9rem);
@@ -618,6 +610,11 @@ a {
 @media (max-width: 520px) {
   .home-hero {
     min-height: clamp(360px, 84vw, 460px);
+  }
+
+  .hero-text-col {
+    padding-right: clamp(1rem, 3vw, 1.5rem);
+    padding-left: clamp(1rem, 3vw, 1.5rem);
   }
 
   .site-mark {
