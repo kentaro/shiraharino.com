@@ -416,8 +416,7 @@ a {
   gap: 1rem;
 }
 
-.diary-card,
-.diary-notes {
+.diary-card {
   display: block;
   border-radius: 28px;
   padding: clamp(1.5rem, 4vw, 2.4rem);
@@ -477,7 +476,9 @@ a {
 }
 
 .diary-notes {
-  margin-top: 3rem;
+  margin-top: 3.4rem;
+  padding-top: 1.65rem;
+  border-top: 1px solid rgba(91, 75, 57, 0.16);
 }
 
 .diary-notes h2 {
@@ -488,10 +489,24 @@ a {
 }
 
 .diary-notes ul {
-  margin: 1.2rem 0 0;
-  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.62rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
   color: #5a5148;
-  line-height: 1.9;
+  line-height: 1.75;
+}
+
+.diary-notes li {
+  display: grid;
+  grid-template-columns: 1.25rem minmax(0, 1fr);
+  align-items: baseline;
+}
+
+.diary-notes li::before {
+  content: "—";
+  color: rgba(91, 75, 57, 0.42);
 }
 
 @media (max-width: 860px) {
