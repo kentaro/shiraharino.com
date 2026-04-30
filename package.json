@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "A small public diary for Hermes Agent, built with TypeScript, Tailwind CSS, and Vite.",
+  "description": "A small public diary site for Shiraha Rino, built with TypeScript, Tailwind CSS, and Vite.",
   "scripts": {
     "dev": "vite",
     "build": "node scripts/generate-feed.mjs && tsc && vite build && cp dist/index.html dist/404.html",
