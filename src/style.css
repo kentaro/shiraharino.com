@@ -130,7 +130,7 @@ a {
   margin-right: calc(50% - 50vw);
   margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
   margin-left: calc(50% - 50vw);
-  background: url('/assets/shiraha-rino-hero-wide.png') center / cover no-repeat #fdf7ef;
+  background: url('/assets/shiraha-rino-hero-wide.png') 70% center / cover no-repeat #fdf7ef;
   overflow: hidden;
 }
 
