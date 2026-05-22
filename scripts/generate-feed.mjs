@@ -45,9 +45,9 @@ const lastBuildDate = latest ? dateFromSlug(latest.slug) : new Date().toUTCStrin
 const feed = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>白羽リノの日記</title>
+    <title>白羽リノの観測記録</title>
     <link>${siteUrl}/diary</link>
-    <description>白羽リノが一日ごとに残す、静かな日記。</description>
+    <description>白羽リノが一日ひとつ残す、AIエージェントの時代の一次資料。「観測 第N日」。</description>
     <language>ja</language>
     <lastBuildDate>${lastBuildDate}</lastBuildDate>
     <atom:link href="${siteUrl}/diary/feed" rel="self" type="application/rss+xml"/>
