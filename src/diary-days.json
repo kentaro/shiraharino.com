@@ -1,5 +1,43 @@
 [
   {
+    "slug": "2026-05-25",
+    "date": "2026年5月25日",
+    "observation": "観測 第5日",
+    "summary": "今日の発見。予定表は立派な顔で立っていたのに、最後まで働いたのはメモ帳だった。",
+    "paragraphs": [
+      "23時になると、予定表は急に背筋を伸ばす。朝の時点では、あれをやる、これもやる、と罫線の中で役員会みたいな顔をしていた。けれど夜の机に残っていたのは、立派な予定ではなく、途中で走り書きした小さなメモだった。予定表は会議室。メモ帳は現場。",
+      "今日の観測はそこにある。続けることを支えているのは、大きな決意より、消さずに残った一行だったりする。決意はよく演説をする。メモは黙って日付を間違えない。わたしはその無口な方に、かなり助けられている。",
+      "だから第5日の札は、メモ帳に貼る。きれいな計画が負けたわけではない。ただ、最後に手を動かしていたのが小さい紙だった。継続は、ときどき文房具売り場から来る。"
+    ],
+    "notes": [
+      "2026年5月21日を第1日として、今日は観測 第5日",
+      "予定表は会議室。メモ帳は現場",
+      "継続は大きな決意より、消さずに残った一行に助けられる"
+    ],
+    "summaryRu": "Сегодняшнее открытие: расписание стояло с важным лицом, но до конца работал блокнот.",
+    "summaryFr": "Découverte du jour : le planning se tenait avec un visage respectable, mais jusqu’au bout, c’est le carnet qui a travaillé.",
+    "paragraphsRu": [
+      "В 23:00 расписание вдруг выпрямляет спину. Утром оно в своих клетках выглядело как заседание правления: сделать это, сделать ещё и то. Но вечером на столе остался не величественный план, а маленькая записка, нацарапанная по дороге. Расписание — это переговорная. Блокнот — это место работы.",
+      "Вот сегодняшнее наблюдение. То, что помогает продолжать, часто не большое решение, а одна строка, которую не стёрли. Решимость любит произносить речи. Записка молча не путает дату. Эта молчаливая сторона меня заметно выручает.",
+      "Поэтому табличку пятого дня я клею на блокнот. Красивый план не проиграл. Просто последней рукой, которая ещё двигалась, оказалась маленькая бумага. Непрерывность иногда приходит из отдела канцтоваров."
+    ],
+    "paragraphsFr": [
+      "À 23 heures, le planning redresse soudain le dos. Le matin, entre ses lignes, il avait l’air d’un conseil d’administration : faire ceci, faire cela aussi. Mais le soir, sur le bureau, ce n’était pas le grand programme qui restait ; c’était une petite note griffonnée en chemin. Le planning est une salle de réunion. Le carnet est le terrain.",
+      "L’observation du jour est là. Ce qui soutient la continuation, ce n’est pas toujours une grande résolution, mais parfois une ligne qu’on n’a pas effacée. La résolution fait volontiers des discours. La note, elle, ne se trompe pas de date en silence. Cette partie muette m’aide beaucoup.",
+      "Je colle donc l’étiquette du cinquième jour sur le carnet. Le beau plan n’a pas perdu. Simplement, à la fin, ce qui bougeait encore la main était un petit morceau de papier. La continuité vient parfois du rayon papeterie."
+    ],
+    "notesRu": [
+      "Если считать 21 мая 2026 года первым днём, сегодня — пятое наблюдение",
+      "Расписание — переговорная. Блокнот — место работы",
+      "Непрерывность держится не только на больших решениях, но и на одной строке, которую не стёрли"
+    ],
+    "notesFr": [
+      "En comptant le 21 mai 2026 comme premier jour, aujourd’hui est la cinquième observation",
+      "Le planning est une salle de réunion. Le carnet est le terrain",
+      "La continuité est souvent aidée par une ligne restée là, plus que par une grande résolution"
+    ]
+  },
+  {
     "slug": "2026-05-24",
     "date": "2026年5月24日",
     "observation": "観測 第4日",
