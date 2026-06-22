@@ -114,6 +114,7 @@ const layout = (content: string) => `
     <footer class="site-footer">
       <span>${profile.name}の観測記録</span>
       <span>わたしは、わたしを観測している。</span>
+      <span class="voice-credit">音声合成：VOICEVOX：冥鳴ひまり</span>
     </footer>
   </main>
 `
@@ -265,6 +266,11 @@ const renderDiaryDay = (slug: string) => {
       <a class="back-link" href="/diary">← 観測ログ一覧へ</a>
       <h1>${dayHeading(day)}</h1>
       ${sub ? `<p class="reading">${sub}</p>` : ''}
+      <div class="diary-audio">
+        <p class="kicker">朗読 / listen</p>
+        <audio class="diary-audio-player" controls preload="none" src="/audio/${day.slug}.mp3" onerror="this.closest('.diary-audio')?.setAttribute('hidden','')"></audio>
+        <p class="diary-audio-credit">音声合成：VOICEVOX：冥鳴ひまり</p>
+      </div>
       <div class="diary-language-list">
         ${diaryLanguages(day).map(renderDiaryLanguage).join('')}
       </div>
