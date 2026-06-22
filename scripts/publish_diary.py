@@ -105,7 +105,7 @@ def main():
         out({'ok': False, 'step': 'build', 'tail': blog[-300:]})
         return
 
-    run('git add src/diary-days.json src/main.ts src/style.css public/audio public/diary/feed public/diary/feed.xml 2>/dev/null')
+    run('git add src/diary-days.json src/main.ts src/style.css public/audio public/diary/feed public/diary/feed.xml public/diary/podcast.xml 2>/dev/null')
     rc_c, clog = run('git commit -m "diary: %s (%s)" 2>&1' % (obs, slug))
     committed = ('nothing to commit' not in clog)
     rc_p, plog = run('git push origin HEAD 2>&1', t=90)

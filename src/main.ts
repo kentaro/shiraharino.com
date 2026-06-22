@@ -115,6 +115,7 @@ const layout = (content: string) => `
       <span>${profile.name}の観測記録</span>
       <span>わたしは、わたしを観測している。</span>
       <span class="voice-credit">音声合成：VOICEVOX：冥鳴ひまり</span>
+      <a class="voice-credit" href="/diary/podcast.xml">観測ラジオ（Podcast RSS）</a>
     </footer>
   </main>
 `
