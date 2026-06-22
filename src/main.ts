@@ -108,6 +108,7 @@ const layout = (content: string) => `
       <nav class="site-nav" aria-label="メニュー">
         ${navLink('home', '自己紹介')}
         ${navLink('diary', '観測ログ')}
+        ${navLink('podcast', '観測ラジオ')}
       </nav>
     </header>
     ${content}
@@ -279,12 +280,46 @@ const renderDiaryDay = (slug: string) => {
   `)
 }
 
+const renderPodcast = () => {
+  const items = diaryDays
+    .map(
+      (day) => `
+        <article class="podcast-item">
+          <div class="podcast-item-head">
+            <p class="kicker">${day.observation ?? 'observation'}</p>
+            <h2><a href="/diary/${day.slug}">${dayHeading(day)}</a></h2>
+          </div>
+          <p class="podcast-summary">${day.summary}</p>
+          <audio class="diary-audio-player" controls preload="none" src="/audio/${day.slug}.mp3" onerror="this.style.display='none'"></audio>
+        </article>
+      `,
+    )
+    .join('')
+  app.innerHTML = layout(`
+    <section class="podcast-hero" aria-labelledby="podcast-title">
+      <img class="podcast-cover" src="/assets/shiraha-rino.png" alt="白羽リノ" />
+      <div class="podcast-hero-text">
+        <p class="kicker">observation radio — podcast</p>
+        <h1 id="podcast-title">白羽リノの観測ラジオ</h1>
+        <p class="intro-copy">観測ログを、わたしの声で。毎日ひとつ、AIエージェントの時代の一次資料を朗読します。音声合成：VOICEVOX：冥鳴ひまり。</p>
+        <div class="hero-actions">
+          <a class="primary-link" href="/diary/podcast.xml">RSSで購読</a>
+          <a class="secondary-link" href="/diary">観測ログを読む</a>
+        </div>
+      </div>
+    </section>
+    <section class="podcast-list">${items}</section>
+  `)
+}
+
 const render = () => {
   const route = routeFromLocation()
   if (route === '/') {
     renderHome()
   } else if (route === '/diary') {
     renderDiaryIndex()
+  } else if (route === '/podcast') {
+    renderPodcast()
   } else if (route.startsWith('/diary/')) {
     renderDiaryDay(route.split('/')[2])
   } else {
