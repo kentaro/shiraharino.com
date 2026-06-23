@@ -177,14 +177,12 @@ def finalize(nar_wav, mp3):
         return r.returncode == 0, r.stderr[:160]
     body = '/tmp/_body.mp3'
     if bgm:
-        # loop bgm under narration at low volume, fade in/out, end with narration
-        fc = ("[1:a]volume=-20dB,aloop=loop=-1:size=2e9[bg];"
-              "[0:a][bg]amix=inputs=2:duration=first:dropout_transition=0,"
-              "afade=t=in:st=0:d=1.5,afade=t=out:st=0:d=1.5:curve=tri[out]")
-        # simpler robust: bgm looped, amix duration=first (narration), then fade out tail
-        fc = ("[1:a]aloop=loop=-1:size=2000000000,volume=-20dB[bg];"
-              "[0:a][bg]amix=inputs=2:duration=first:dropout_transition=2[mx];"
-              "[mx]afade=t=out:st=0:d=0[out]")
+        # bgm looped (via -stream_loop) under narration: keep the VOICE at full
+        # volume (normalize=0), bgm low at ~-18dB with fade in and a tail fade-out.
+        nd = duration(nar_wav) or 0
+        fo = max(0.0, nd - 2.0)
+        fc = (f"[1:a]volume=0.13,afade=t=in:st=0:d=2,afade=t=out:st={fo:.2f}:d=2[bg];"
+              f"[0:a][bg]amix=inputs=2:duration=first:dropout_transition=2:normalize=0[out]")
         r = subprocess.run(['ffmpeg', '-hide_banner', '-loglevel', 'error', '-y',
                             '-i', nar_wav, '-stream_loop', '-1', '-i', bgm,
                             '-filter_complex', fc, '-map', '[out]',
