@@ -100,12 +100,14 @@ def main():
     # generate VOICEVOX narration for any entry missing audio (B4); self-heals engine
     run('python3 scripts/gen_diary_audio.py', t=900)
 
-    rc, blog = run('npm run build')
+    # Feed generation only. The site build runs on LOLIPOP! Deploy Now (and CI),
+    # not on this box: `next build` does not fit in the box's RAM.
+    rc, blog = run('node scripts/generate-feed.mjs')
     if rc != 0:
-        out({'ok': False, 'step': 'build', 'tail': blog[-300:]})
+        out({'ok': False, 'step': 'feed', 'tail': blog[-300:]})
         return
 
-    run('git add src/diary-days.json src/main.ts src/style.css public/audio public/diary/feed public/diary/feed.xml public/diary/podcast.xml 2>/dev/null')
+    run('git add src/diary-days.json src/style.css public/audio public/diary/feed public/diary/feed.xml public/diary/podcast.xml 2>/dev/null')
     rc_c, clog = run('git commit -m "diary: %s (%s)" 2>&1' % (obs, slug))
     committed = ('nothing to commit' not in clog)
     rc_p, plog = run('git push origin HEAD 2>&1', t=90)

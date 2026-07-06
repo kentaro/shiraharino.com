@@ -1,8 +1,12 @@
 node_modules
 dist
+out
+.next
+.lolipop
 .DS_Store
 .env
 .env.*
 !.env.example
 
 *.deb
+tsconfig.tsbuildinfo

@@ -1,0 +1,43 @@
+name: Deploy to LOLIPOP! Deploy Now
+
+# Uploads the source to LOLIPOP! Deploy Now on every push; the service builds
+# (npm ci && npm run build) and publishes. Auth uses the session credentials in
+# the LOLIPOP_CREDENTIALS secret (~/.config/lolipop/credentials.json). Sessions
+# expire (~1 month): when this job starts failing with auth errors, run
+# `lolipop login` locally and refresh the secret:
+#   gh secret set LOLIPOP_CREDENTIALS -R kentaro/shiraharino.com < ~/.config/lolipop/credentials.json
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-now
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install lolipop CLI
+        run: npm install -g lolipop
+
+      - name: Restore credentials
+        env:
+          LOLIPOP_CREDENTIALS: ${{ secrets.LOLIPOP_CREDENTIALS }}
+        run: |
+          mkdir -p ~/.config/lolipop
+          printf '%s' "$LOLIPOP_CREDENTIALS" > ~/.config/lolipop/credentials.json
+          chmod 600 ~/.config/lolipop/credentials.json
+
+      - name: Deploy
+        run: lolipop deploy --project 01KWV2SKDJTGR5F6WP520Q3DFG --json

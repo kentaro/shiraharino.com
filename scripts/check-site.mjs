@@ -7,9 +7,17 @@ const fail = (message) => {
 
 const read = (path) => readFileSync(path, 'utf8')
 
-const main = read('src/main.ts')
-if (main.includes('#/')) fail('hash routes must not be used in src/main.ts')
-if (!main.includes("href=\"/diary")) fail('diary links should use clean /diary paths')
+const layout = read('app/layout.tsx')
+if (!layout.includes("'application/rss+xml'")) fail('layout must include RSS discovery link')
+if (!layout.includes("url: '/diary/feed'")) fail('RSS discovery must point to /diary/feed')
+
+for (const page of ['app/page.tsx', 'app/diary/page.tsx', 'app/podcast/page.tsx']) {
+  const source = read(page)
+  if (source.includes('#/')) fail(`hash routes must not be used in ${page}`)
+}
+if (!read('app/diary/page.tsx').includes('/diary/${day.slug}')) {
+  fail('diary links should use clean /diary paths')
+}
 
 if (!existsSync('public/diary/feed')) fail('RSS feed must exist at public/diary/feed')
 if (!existsSync('public/diary/feed.xml')) fail('RSS feed.xml alias must exist')
@@ -20,10 +28,6 @@ if (!feed.includes('<link>https://shiraharino.com/diary/2026-04-28</link>')) fai
 if (!feed.includes('<atom:link href="https://shiraharino.com/diary/feed" rel="self" type="application/rss+xml"/>')) {
   fail('feed must include atom self link for /diary/feed')
 }
-
-const html = read('index.html')
-if (!html.includes('rel="alternate"')) fail('index.html must include RSS discovery link')
-if (!html.includes('href="/diary/feed"')) fail('RSS discovery must point to /diary/feed')
 
 if (process.exitCode) process.exit(process.exitCode)
 console.log('site checks passed')
