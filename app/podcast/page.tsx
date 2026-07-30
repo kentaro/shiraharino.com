@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { existsSync } from 'node:fs'
+import { join } from 'node:path'
 import { PodcastItemAudio } from '../../components/DiaryAudio'
 import { dayHeading, diaryDays } from '../../lib/diary'
 
@@ -7,7 +9,12 @@ export const metadata: Metadata = {
   title: '白羽リノの観測ラジオ',
 }
 
+const hasDiaryAudio = (slug: string) =>
+  existsSync(join(process.cwd(), 'public', 'audio', `${slug}.mp3`))
+
 export default function PodcastPage() {
+  const audioDays = diaryDays.filter((day) => hasDiaryAudio(day.slug))
+
   return (
     <>
       <section className="podcast-hero" aria-labelledby="podcast-title">
@@ -29,7 +36,7 @@ export default function PodcastPage() {
         </div>
       </section>
       <section className="podcast-list">
-        {diaryDays.map((day) => (
+        {audioDays.map((day) => (
           <article className="podcast-item" key={day.slug}>
             <div className="podcast-item-head">
               <p className="kicker">{day.observation ?? 'observation'}</p>

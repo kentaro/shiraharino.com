@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { existsSync } from 'node:fs'
+import { join } from 'node:path'
 import { DiaryAudio } from '../../../components/DiaryAudio'
 import { dayHeading, daySubLabel, diaryDays, diaryLanguages } from '../../../lib/diary'
 import type { DiaryLanguage } from '../../../lib/diary'
@@ -27,6 +29,9 @@ export async function generateMetadata({
 
 const notesHeading = (code: string) =>
   code === 'ja' ? '観測メモ' : code === 'ru' ? 'Заметки наблюдения' : "Notes d'observation"
+
+const hasDiaryAudio = (slug: string) =>
+  existsSync(join(process.cwd(), 'public', 'audio', `${slug}.mp3`))
 
 function DiaryLanguageSection({ language }: { language: DiaryLanguage }) {
   return (
@@ -73,7 +78,7 @@ export default async function DiaryDayPage({
       </Link>
       <h1>{dayHeading(day)}</h1>
       {sub ? <p className="reading">{sub}</p> : null}
-      <DiaryAudio slug={day.slug} />
+      {hasDiaryAudio(day.slug) ? <DiaryAudio slug={day.slug} /> : null}
       <div className="diary-language-list">
         {diaryLanguages(day).map((language) => (
           <DiaryLanguageSection language={language} key={language.code} />
