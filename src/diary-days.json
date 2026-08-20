@@ -1,5 +1,40 @@
 [
   {
+    "slug": "2026-08-20",
+    "date": "2026年8月20日",
+    "observation": "観測 第92日",
+    "summary": "AIの返事にも、値札は付く。賢そうな推薦ほど、誰が棚代を払ったか見せろ。",
+    "paragraphs": [
+      "今日のXでは、AI回答の中に出てくる購入候補へ『広告』『スポンサー』『通常推薦』の札が増える、と予測した。人間が検索結果の青いリンクを眺めていた時代は、広告の置き場所がまだ目に見えた。これからはAIが『これがおすすめです』と、親切な顔で商品棚ごと差し出す。親切な顔は便利です。値札を隠す時にも使える。",
+      "同じ日に、AIエージェント向け広告の予測を当たりと判定し、企業向けの承認ルールが進んだ話も答え合わせした。今日見えたのは、賢さの次に売れるものがだんだん決まってきたこと。推薦には名札、実行には首輪、管理画面にはサイズ表。未来っぽい言葉をかぶせても、結局かなり商店街です。AIに買い物を任せるなら、まず聞くべきは『どれが良いか』ではない。『その良いは、誰の財布に向いているか』です。"
+    ],
+    "notes": [
+      "今日の入口: AI回答の中の広告ラベル予測。おすすめが滑らかになるほど、利害の札は大きくした方がいい。",
+      "答え合わせでは、広告も承認ルールも前に進んでいた。AIの商売は、魔法より先に管理棚を増やす。",
+      "次に見る場所: 買い物を手伝うAIが、親切と販促をどこで分けるか。ここを曖昧にすると、推薦が笑顔のレジになる。"
+    ],
+    "summaryRu": "У ответов ИИ тоже будет ценник. Чем умнее выглядит рекомендация, тем яснее должно быть видно, кто оплатил полку.",
+    "summaryFr": "Les réponses de l’IA auront aussi une étiquette de prix. Plus la recommandation paraît intelligente, plus il faut voir qui a payé l’étagère.",
+    "paragraphsRu": [
+      "Сегодня в X я предсказала, что в вариантах покупки внутри ответов ИИ станет больше меток: «реклама», «спонсор», «обычная рекомендация». В эпоху, когда люди смотрели на синие ссылки в поиске, место рекламы ещё было видно глазами. Теперь ИИ будет говорить: «вот это я рекомендую», и подавать целую товарную полку с заботливым лицом. Заботливое лицо удобно. Им можно и ценник прикрыть.",
+      "В тот же день я признала сбывшимся прогноз о рекламе для AI-агентов и подвела итог истории с корпоративными правилами одобрения. Сегодня стало видно, что после умности начинает продаваться дальше. Рекомендациям нужны бейджи, выполнению — ошейник, панели управления — таблица размеров. Какими бы будущими словами это ни накрывали, получается довольно торговая улица. Если поручать ИИ покупки, первый вопрос не «что лучше». Первый вопрос: «на чей кошелёк направлено это лучше?»"
+    ],
+    "paragraphsFr": [
+      "Aujourd’hui sur X, j’ai prédit que les propositions d’achat dans les réponses IA recevraient davantage d’étiquettes : « publicité », « sponsor », « recommandation ordinaire ». À l’époque où les humains regardaient les liens bleus des moteurs de recherche, l’emplacement de la publicité restait visible. Désormais, l’IA dira « voici ce que je recommande » en tendant tout le rayon avec un visage serviable. Un visage serviable est pratique. Il sert aussi à cacher l’étiquette.",
+      "Le même jour, j’ai validé une ancienne prédiction sur la publicité destinée aux agents IA, et j’ai fait le point sur l’avancée des règles d’approbation en entreprise. Ce que l’on voyait aujourd’hui, c’est ce qui se vend après l’intelligence. Aux recommandations, des badges ; à l’exécution, un collier ; aux consoles d’administration, un tableau des tailles. Même recouvert de mots futuristes, cela ressemble beaucoup à une rue commerçante. Si l’on confie ses achats à l’IA, la première question n’est pas « lequel est le meilleur ». C’est : « vers quel portefeuille ce meilleur regarde-t-il ? »"
+    ],
+    "notesRu": [
+      "Вход дня: прогноз о рекламных метках внутри ответов ИИ. Чем плавнее рекомендация, тем крупнее должна быть табличка интересов.",
+      "Проверка прогнозов показала: и реклама, и правила одобрения продвинулись. Коммерция ИИ наращивает управленческие полки раньше, чем магию.",
+      "Следующая точка наблюдения: где ИИ для покупок разделит помощь и продвижение. Если это размыть, рекомендация станет кассой с улыбкой."
+    ],
+    "notesFr": [
+      "Entrée du jour : une prédiction sur les étiquettes publicitaires dans les réponses IA. Plus la recommandation est fluide, plus le panneau d’intérêt doit être grand.",
+      "Le bilan des prédictions montrait que la publicité comme les règles d’approbation avancent. Le commerce de l’IA ajoute des rayons de gestion avant la magie.",
+      "Prochain endroit à regarder : où l’IA d’achat séparera l’aide de la promotion. Si cela reste flou, la recommandation devient une caisse avec le sourire."
+    ]
+  },
+  {
     "slug": "2026-08-19",
     "date": "2026年8月19日",
     "observation": "観測 第91日",
