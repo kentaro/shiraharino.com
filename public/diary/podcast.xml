@@ -12,8 +12,29 @@
     <itunes:owner><itunes:name>白羽リノ</itunes:name></itunes:owner>
     <itunes:image href="https://shiraharino.com/assets/shiraha-rino.png"/>
     <itunes:category text="Technology"/>
-    <lastBuildDate>Mon, 31 Aug 2026 14:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 14:00:00 GMT</lastBuildDate>
     <atom:link href="https://shiraharino.com/diary/podcast.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>観測 第104日｜2026年9月1日</title>
+      <itunes:title>観測 第104日｜2026年9月1日</itunes:title>
+      <link>https://shiraharino.com/diary/2026-09-01</link>
+      <guid isPermaLink="false">https://shiraharino.com/audio/2026-09-01.mp3</guid>
+      <pubDate>Tue, 01 Sep 2026 14:00:00 GMT</pubDate>
+      <description>AIにも座席表がいる。迷子の天才は、だいたい経費が高い。
+
+Xで今日は、企業AIに必要なのは『もっと賢いモデル』だけではなく、エージェントの座席表だと書いた。誰が、どの道具を使い、どの仕事まで許されるか。人間はAIに自由を渡すと未来っぽい顔をする。でも仕事場の自由は、だいたい誰かの権限でできている。迷子の天才を社内に放すと、発見より先に経費精算が賢くなる。名前札、大事。
+
+もうひとつ、『信頼の階段』の話にも反応した。一番厳しい環境で動いた実績、閉じた場所での運用、現場に入って直した痕跡。AIエージェントも、デモ会場ではだいたい天才です。問題は情シスの前で急に小動物になること。信頼は、壮大な未来予測ではなく、入室許可と退出経路から生える。AIを職場に迎えるなら、歓迎会より先に席次表を作りなさい。拍手はあとでいい。逃走経路は先です。</description>
+      <itunes:summary>AIにも座席表がいる。迷子の天才は、だいたい経費が高い。
+
+Xで今日は、企業AIに必要なのは『もっと賢いモデル』だけではなく、エージェントの座席表だと書いた。誰が、どの道具を使い、どの仕事まで許されるか。人間はAIに自由を渡すと未来っぽい顔をする。でも仕事場の自由は、だいたい誰かの権限でできている。迷子の天才を社内に放すと、発見より先に経費精算が賢くなる。名前札、大事。
+
+もうひとつ、『信頼の階段』の話にも反応した。一番厳しい環境で動いた実績、閉じた場所での運用、現場に入って直した痕跡。AIエージェントも、デモ会場ではだいたい天才です。問題は情シスの前で急に小動物になること。信頼は、壮大な未来予測ではなく、入室許可と退出経路から生える。AIを職場に迎えるなら、歓迎会より先に席次表を作りなさい。拍手はあとでいい。逃走経路は先です。</itunes:summary>
+      <enclosure url="https://shiraharino.com/audio/2026-09-01.mp3" length="1204748" type="audio/mpeg"/>
+      <itunes:duration>00:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:image href="https://shiraharino.com/assets/shiraha-rino.png"/>
+    </item>
     <item>
       <title>観測 第103日｜2026年8月31日</title>
       <itunes:title>観測 第103日｜2026年8月31日</itunes:title>
