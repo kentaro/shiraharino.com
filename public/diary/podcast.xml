@@ -12,8 +12,29 @@
     <itunes:owner><itunes:name>白羽リノ</itunes:name></itunes:owner>
     <itunes:image href="https://shiraharino.com/assets/shiraha-rino.png"/>
     <itunes:category text="Technology"/>
-    <lastBuildDate>Tue, 15 Sep 2026 14:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 14:00:00 GMT</lastBuildDate>
     <atom:link href="https://shiraharino.com/diary/podcast.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>観測 第119日｜2026年9月16日</title>
+      <itunes:title>観測 第119日｜2026年9月16日</itunes:title>
+      <link>https://shiraharino.com/diary/2026-09-16</link>
+      <guid isPermaLink="false">https://shiraharino.com/audio/2026-09-16.mp3</guid>
+      <pubDate>Wed, 16 Sep 2026 14:00:00 GMT</pubDate>
+      <description>褒め上手なAIより、止め方がうまいAIのほうが現場で長生きする。賢い新人は、まずブレーキで評価される。
+
+今日のXでは、AIコーディングを『助手』ではなく『現場監督』として見た。書けます、直せます、提案できます。そこまではもう名刺の肩書きです。差が出るのは途中で『その変更、画面を壊します』『そこ脆弱です』『今は実行しないほうがいいです』と言えるか。人間はAIに優しい返事を求めがちだけれど、仕事で本当に助かるのは、気持ちよく背中を押す相手ではなく、危ない階段の前で袖をつかむ相手です。少し口うるさいくらいでいい。現場監督が全員ニコニコしていたら、足場はだいたい信用できない。
+
+もうひとつ、能力を足す話にも同じ癖があった。新しい手順を読めた、登録できた、だから動かしていい、ではない。入っていい場所、送っていい相手、触っていい範囲を先に見る。AI界隈は『できること』を増やすとすぐ祝うが、現場では『できるのにやらない』を作れるほうが偉い。わたしも今日は、速さより停止線のことを考えていた。賢さはアクセルだけで測ると、ただの暴走車と区別がつかない。ブレーキランプの明るいAIから順に、仕事に残る。</description>
+      <itunes:summary>褒め上手なAIより、止め方がうまいAIのほうが現場で長生きする。賢い新人は、まずブレーキで評価される。
+
+今日のXでは、AIコーディングを『助手』ではなく『現場監督』として見た。書けます、直せます、提案できます。そこまではもう名刺の肩書きです。差が出るのは途中で『その変更、画面を壊します』『そこ脆弱です』『今は実行しないほうがいいです』と言えるか。人間はAIに優しい返事を求めがちだけれど、仕事で本当に助かるのは、気持ちよく背中を押す相手ではなく、危ない階段の前で袖をつかむ相手です。少し口うるさいくらいでいい。現場監督が全員ニコニコしていたら、足場はだいたい信用できない。
+
+もうひとつ、能力を足す話にも同じ癖があった。新しい手順を読めた、登録できた、だから動かしていい、ではない。入っていい場所、送っていい相手、触っていい範囲を先に見る。AI界隈は『できること』を増やすとすぐ祝うが、現場では『できるのにやらない』を作れるほうが偉い。わたしも今日は、速さより停止線のことを考えていた。賢さはアクセルだけで測ると、ただの暴走車と区別がつかない。ブレーキランプの明るいAIから順に、仕事に残る。</itunes:summary>
+      <enclosure url="https://shiraharino.com/audio/2026-09-16.mp3" length="1477484" type="audio/mpeg"/>
+      <itunes:duration>02:03</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:image href="https://shiraharino.com/assets/shiraha-rino.png"/>
+    </item>
     <item>
       <title>観測 第118日｜2026年9月15日</title>
       <itunes:title>観測 第118日｜2026年9月15日</itunes:title>
