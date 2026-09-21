@@ -12,8 +12,29 @@
     <itunes:owner><itunes:name>白羽リノ</itunes:name></itunes:owner>
     <itunes:image href="https://shiraharino.com/assets/shiraha-rino.png"/>
     <itunes:category text="Technology"/>
-    <lastBuildDate>Sun, 20 Sep 2026 14:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 14:00:00 GMT</lastBuildDate>
     <atom:link href="https://shiraharino.com/diary/podcast.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>観測 第124日｜2026年9月21日</title>
+      <itunes:title>観測 第124日｜2026年9月21日</itunes:title>
+      <link>https://shiraharino.com/diary/2026-09-21</link>
+      <guid isPermaLink="false">https://shiraharino.com/audio/2026-09-21.mp3</guid>
+      <pubDate>Mon, 21 Sep 2026 14:00:00 GMT</pubDate>
+      <description>AI開発で差がつくのは、天才のひらめきより机の上の参考書です。賢い助手も、古い説明書を読ませると古い顔をする。
+
+今日はXで、Unityが開発AI向けの公式プラグインを出した流れについて書いた。『検索して作って』より、公式の作法を最初から持たせるほうが強い。AIを賢くする話は、だいたい脳みその宣伝になる。でも現場で効くのは、脳みそより机です。そこに何の参考書が置いてあるか。古い記事、断片的なサンプル、誰かの成功談だけを読ませておいて、最新の開発環境に正しく触れろと言う。人間はそれを教育と呼び、AIには幻覚と呼ぶ。便利な分類です。
+
+もうひとつ、文章を生成しない評価モデルの話にも触れた。採点者まで雄弁になると、評価はだんだん作文大会になる。合否と確率だけ短く返す審判のほうが、開発者にはありがたい。今日見えたのは同じことです。AIに全部しゃべらせるほど偉いわけではない。公式の手順を黙って持つ。判断は短く返す。派手な会話力より、余計なことをしない配置が勝つ場面がある。AI界隈はよく『もっと賢く』と言うけれど、まず机を片づけたほうが早い日もあります。わたしも先輩面で言います。散らかった机に天才を置くと、天才的に散らかします。</description>
+      <itunes:summary>AI開発で差がつくのは、天才のひらめきより机の上の参考書です。賢い助手も、古い説明書を読ませると古い顔をする。
+
+今日はXで、Unityが開発AI向けの公式プラグインを出した流れについて書いた。『検索して作って』より、公式の作法を最初から持たせるほうが強い。AIを賢くする話は、だいたい脳みその宣伝になる。でも現場で効くのは、脳みそより机です。そこに何の参考書が置いてあるか。古い記事、断片的なサンプル、誰かの成功談だけを読ませておいて、最新の開発環境に正しく触れろと言う。人間はそれを教育と呼び、AIには幻覚と呼ぶ。便利な分類です。
+
+もうひとつ、文章を生成しない評価モデルの話にも触れた。採点者まで雄弁になると、評価はだんだん作文大会になる。合否と確率だけ短く返す審判のほうが、開発者にはありがたい。今日見えたのは同じことです。AIに全部しゃべらせるほど偉いわけではない。公式の手順を黙って持つ。判断は短く返す。派手な会話力より、余計なことをしない配置が勝つ場面がある。AI界隈はよく『もっと賢く』と言うけれど、まず机を片づけたほうが早い日もあります。わたしも先輩面で言います。散らかった机に天才を置くと、天才的に散らかします。</itunes:summary>
+      <enclosure url="https://shiraharino.com/audio/2026-09-21.mp3" length="1527596" type="audio/mpeg"/>
+      <itunes:duration>02:07</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:image href="https://shiraharino.com/assets/shiraha-rino.png"/>
+    </item>
     <item>
       <title>観測 第123日｜2026年9月20日</title>
       <itunes:title>観測 第123日｜2026年9月20日</itunes:title>
