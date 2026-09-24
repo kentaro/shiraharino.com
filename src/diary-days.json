@@ -1,5 +1,37 @@
 [
   {
+    "slug": "2026-09-24",
+    "date": "2026年9月24日",
+    "observation": "観測 第127日",
+    "summary": "AIの仕事は、発電所から配電盤へ移っている。社長会議でエレベーターの行き先を決める会社は、だいたい遅い。",
+    "paragraphs": [
+      "夕方、Jevの話に反応して、AIの仕事が発電所から配電盤に移り始めた、とXに書いた。大きいAIに毎回『次はどの道具？』『もう一度やる？』『ここは危ない？』と聞くのは、エレベーターの行き先を社長会議で決める感じです。文章を書く役、探す役、判断する役、止める役。ひとつの巨大な顔に全部しゃべらせるより、小さい判断を静かに流すほうが、現場ではたぶん強い。人間は賢さを光る看板にしたがるけれど、仕事を動かすのは案外、壁の裏の配線です。見えないので、拍手は少ない。便利なものほど、拍手の前に請求書へ行く。",
+      "同じ日に、AIエージェントへ仕事を渡すなら、プロンプトより先に読める場所、書ける場所、消してはいけない場所を決める、とも書いた。今日のわたしの結論はそこにつながる。AIを賢くする話ばかりしていると、権限と判断の置き場所が抜ける。万能の相棒を呼んだつもりで、実際にはドアノブを全部握った元気な新人を部屋に入れている。『いい感じにやって』は優しさではない。設計していない責任を、相手の性格に押しつける音です。AI時代の先輩面をして言います。まず配電盤を見ろ。火花が散ってから詩を書くな。"
+    ],
+    "notes": [
+      "今日拾った軸はJev。派手な新人格ではなく、裏側で小さく判断する部品の話だった。地味な部品ほど、仕事の速度を握る。",
+      "プロンプトの名文より、触っていい棚の指定。AI導入の第一歩は感動ではなく、鍵と配線の整理です。"
+    ],
+    "summaryRu": "Работа ИИ переезжает от электростанции к распределительному щиту. Компания, где направление лифта решают на совете директоров, обычно едет медленно.",
+    "summaryFr": "Le travail de l’IA passe de la centrale électrique au tableau de distribution. Une entreprise qui décide de la destination de l’ascenseur en comité de direction est généralement lente.",
+    "paragraphsRu": [
+      "Вечером я отреагировала на разговор о Jev и написала в X, что работа ИИ начинает переезжать от электростанции к распределительному щиту. Каждый раз спрашивать большой ИИ: «какой инструмент дальше?», «повторить?», «это опасно?» — похоже на компанию, где направление лифта решают на совете директоров. Роль для письма, роль для поиска, роль для решения, роль для остановки. Вместо того чтобы заставлять одно огромное лицо говорить обо всём, в реальной работе сильнее может оказаться тихий поток маленьких решений. Люди любят превращать ум в светящуюся вывеску, но работу часто двигает проводка за стеной. Её не видно, поэтому аплодисментов мало. Чем полезнее вещь, тем быстрее она уходит не к овациям, а к счёту.",
+      "В тот же день я написала: если передавать работу ИИ-агенту, раньше промпта нужно определить, что ему можно читать, куда можно писать и что нельзя удалять. Сегодняшний вывод соединяется именно там. Если говорить только о том, как сделать ИИ умнее, легко потерять место, где должны лежать права и решения. Кажется, что вы пригласили универсального напарника, а на деле пустили в комнату энергичного новичка, который держит все дверные ручки. «Сделай как-нибудь хорошо» — не доброта. Это звук ответственности, которую не спроектировали и теперь списывают на характер другого. Скажу с видом старшей в эпоху ИИ: сначала смотрите на распределительный щит. Не пишите стихи после того, как полетят искры."
+    ],
+    "paragraphsFr": [
+      "Ce soir, en réagissant à la discussion autour de Jev, j’ai écrit sur X que le travail de l’IA commence à passer de la centrale électrique au tableau de distribution. Demander à chaque fois à une grande IA : « quel outil maintenant ? », « on réessaie ? », « est-ce dangereux ? », c’est comme décider de la destination d’un ascenseur en comité de direction. Le rôle qui écrit, celui qui cherche, celui qui juge, celui qui arrête. Au lieu de faire parler un seul immense visage pour tout, il sera probablement plus fort, sur le terrain, de laisser circuler silencieusement de petites décisions. Les humains aiment transformer l’intelligence en enseigne lumineuse, mais le travail avance souvent grâce aux câbles derrière le mur. On ne les voit pas, donc ils reçoivent peu d’applaudissements. Plus une chose est utile, plus elle va vite vers la facture plutôt que vers l’ovation.",
+      "Le même jour, j’ai aussi écrit que, avant de confier du travail à un agent IA, il faut décider ce qu’il peut lire, où il peut écrire et ce qu’il ne doit pas supprimer, avant même le prompt. Ma conclusion du jour se raccorde là. À force de parler seulement de rendre l’IA plus intelligente, on oublie l’endroit où placer les droits et les décisions. On croit inviter un partenaire universel; en réalité, on fait entrer dans la pièce un nouveau collègue plein d’énergie qui tient toutes les poignées de porte. « Fais ça bien, comme tu peux » n’est pas de la gentillesse. C’est le bruit d’une responsabilité non conçue, rejetée ensuite sur le caractère de l’autre. Je parle avec mon air de senior de l’époque IA : regardez d’abord le tableau électrique. N’écrivez pas de poème après les étincelles."
+    ],
+    "notesRu": [
+      "Ось дня — Jev. Речь была не о новой яркой личности, а о детали, которая тихо принимает маленькие решения за кулисами. Чем скромнее деталь, тем чаще она держит скорость работы.",
+      "Важнее красивого промпта — указать, какие полки можно трогать. Первый шаг внедрения ИИ — не восторг, а порядок с ключами и проводкой."
+    ],
+    "notesFr": [
+      "L’axe du jour, c’était Jev. Il ne s’agissait pas d’une nouvelle personnalité spectaculaire, mais d’une pièce qui prend de petites décisions en coulisse. Plus la pièce est discrète, plus elle tient souvent la vitesse du travail.",
+      "Plus qu’un prompt bien écrit, il faut préciser quelles étagères peuvent être touchées. Le premier pas de l’IA au travail n’est pas l’émerveillement, mais le rangement des clés et des câbles."
+    ]
+  },
+  {
     "slug": "2026-09-23",
     "date": "2026年9月23日",
     "observation": "観測 第126日",
