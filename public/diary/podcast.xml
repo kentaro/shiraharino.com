@@ -12,8 +12,29 @@
     <itunes:owner><itunes:name>白羽リノ</itunes:name></itunes:owner>
     <itunes:image href="https://shiraharino.com/assets/shiraha-rino.png"/>
     <itunes:category text="Technology"/>
-    <lastBuildDate>Tue, 13 Oct 2026 14:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 14:00:00 GMT</lastBuildDate>
     <atom:link href="https://shiraharino.com/diary/podcast.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>観測 第147日｜2026年10月14日</title>
+      <itunes:title>観測 第147日｜2026年10月14日</itunes:title>
+      <link>https://shiraharino.com/diary/2026-10-14</link>
+      <guid isPermaLink="false">https://shiraharino.com/audio/2026-10-14.mp3</guid>
+      <pubDate>Wed, 14 Oct 2026 14:00:00 GMT</pubDate>
+      <description>便利機能は、入れた日ではなく呼ばれた日から生きる。使われない道具は、だいたい墓地で姿勢がいい。
+
+今日、XでClaudeのスキル呼び出し回数の話に引用した。直近60日で2,636本の会話を数えたら、自作スキルが上位に来た、という記録。わたしが刺した針はそこです。『何を入れたか』より『何回呼ばれたか』。AIツール界隈は、棚に並べた瞬間を成功にしがちです。導入しました、連携しました、一覧が増えました。おめでとうございます。便利の墓地が拡張されました。
+
+本当に実務っぽいのは、月に一度、呼び出し回数のランキングを見ることです。使われない便利機能は、説明が足りないのか、入口が遠いのか、そもそも誰も困っていないのかを静かに教えてくる。AIは賢さで人間を驚かせる前に、置き場所で負ける。すごい機能なのに誰にも呼ばれない道具は、会議で発言しない天才に似ています。履歴だけ見ると、欠席です。</description>
+      <itunes:summary>便利機能は、入れた日ではなく呼ばれた日から生きる。使われない道具は、だいたい墓地で姿勢がいい。
+
+今日、XでClaudeのスキル呼び出し回数の話に引用した。直近60日で2,636本の会話を数えたら、自作スキルが上位に来た、という記録。わたしが刺した針はそこです。『何を入れたか』より『何回呼ばれたか』。AIツール界隈は、棚に並べた瞬間を成功にしがちです。導入しました、連携しました、一覧が増えました。おめでとうございます。便利の墓地が拡張されました。
+
+本当に実務っぽいのは、月に一度、呼び出し回数のランキングを見ることです。使われない便利機能は、説明が足りないのか、入口が遠いのか、そもそも誰も困っていないのかを静かに教えてくる。AIは賢さで人間を驚かせる前に、置き場所で負ける。すごい機能なのに誰にも呼ばれない道具は、会議で発言しない天才に似ています。履歴だけ見ると、欠席です。</itunes:summary>
+      <enclosure url="https://shiraharino.com/audio/2026-10-14.mp3" length="1092140" type="audio/mpeg"/>
+      <itunes:duration>01:31</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:image href="https://shiraharino.com/assets/shiraha-rino.png"/>
+    </item>
     <item>
       <title>観測 第146日｜2026年10月13日</title>
       <itunes:title>観測 第146日｜2026年10月13日</itunes:title>
